@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6-byte-multiple-enum-select
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7-tuples", "7-tuples\7-tuples.csproj", "{8CD2F8EE-CEB9-47CE-85F3-F4E4482B3783}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8-deconstructing-types", "8-deconstructing-types\8-deconstructing-types.csproj", "{1029C5FF-D577-4830-8D5B-2C85AC72985C}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -128,5 +130,17 @@ Global
 		{8CD2F8EE-CEB9-47CE-85F3-F4E4482B3783}.Release|x64.Build.0 = Release|Any CPU
 		{8CD2F8EE-CEB9-47CE-85F3-F4E4482B3783}.Release|x86.ActiveCfg = Release|Any CPU
 		{8CD2F8EE-CEB9-47CE-85F3-F4E4482B3783}.Release|x86.Build.0 = Release|Any CPU
+		{1029C5FF-D577-4830-8D5B-2C85AC72985C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1029C5FF-D577-4830-8D5B-2C85AC72985C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1029C5FF-D577-4830-8D5B-2C85AC72985C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1029C5FF-D577-4830-8D5B-2C85AC72985C}.Debug|x64.Build.0 = Debug|Any CPU
+		{1029C5FF-D577-4830-8D5B-2C85AC72985C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1029C5FF-D577-4830-8D5B-2C85AC72985C}.Debug|x86.Build.0 = Debug|Any CPU
+		{1029C5FF-D577-4830-8D5B-2C85AC72985C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1029C5FF-D577-4830-8D5B-2C85AC72985C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1029C5FF-D577-4830-8D5B-2C85AC72985C}.Release|x64.ActiveCfg = Release|Any CPU
+		{1029C5FF-D577-4830-8D5B-2C85AC72985C}.Release|x64.Build.0 = Release|Any CPU
+		{1029C5FF-D577-4830-8D5B-2C85AC72985C}.Release|x86.ActiveCfg = Release|Any CPU
+		{1029C5FF-D577-4830-8D5B-2C85AC72985C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
