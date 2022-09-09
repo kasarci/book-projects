@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5-calculator-unit-test", "5
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6-byte-multiple-enum-selection", "6-byte-multiple-enum-selection\6-byte-multiple-enum-selection.csproj", "{18936D78-7A8D-42EE-9DD1-E0F1CE1F3A6F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7-tuples", "7-tuples\7-tuples.csproj", "{8CD2F8EE-CEB9-47CE-85F3-F4E4482B3783}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -114,5 +116,17 @@ Global
 		{18936D78-7A8D-42EE-9DD1-E0F1CE1F3A6F}.Release|x64.Build.0 = Release|Any CPU
 		{18936D78-7A8D-42EE-9DD1-E0F1CE1F3A6F}.Release|x86.ActiveCfg = Release|Any CPU
 		{18936D78-7A8D-42EE-9DD1-E0F1CE1F3A6F}.Release|x86.Build.0 = Release|Any CPU
+		{8CD2F8EE-CEB9-47CE-85F3-F4E4482B3783}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CD2F8EE-CEB9-47CE-85F3-F4E4482B3783}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CD2F8EE-CEB9-47CE-85F3-F4E4482B3783}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8CD2F8EE-CEB9-47CE-85F3-F4E4482B3783}.Debug|x64.Build.0 = Debug|Any CPU
+		{8CD2F8EE-CEB9-47CE-85F3-F4E4482B3783}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8CD2F8EE-CEB9-47CE-85F3-F4E4482B3783}.Debug|x86.Build.0 = Debug|Any CPU
+		{8CD2F8EE-CEB9-47CE-85F3-F4E4482B3783}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CD2F8EE-CEB9-47CE-85F3-F4E4482B3783}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CD2F8EE-CEB9-47CE-85F3-F4E4482B3783}.Release|x64.ActiveCfg = Release|Any CPU
+		{8CD2F8EE-CEB9-47CE-85F3-F4E4482B3783}.Release|x64.Build.0 = Release|Any CPU
+		{8CD2F8EE-CEB9-47CE-85F3-F4E4482B3783}.Release|x86.ActiveCfg = Release|Any CPU
+		{8CD2F8EE-CEB9-47CE-85F3-F4E4482B3783}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
