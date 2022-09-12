@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9-delegates-and-events", "9
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10-IComparable", "10-IComparable\10-IComparable.csproj", "{400050C1-A5CA-4FAD-8F8C-7BEB2C7289CA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11-inheriting-exception", "11-inheriting-exception\11-inheriting-exception.csproj", "{FDDB05A1-AA83-4078-845B-724D399EACAE}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -170,5 +172,17 @@ Global
 		{400050C1-A5CA-4FAD-8F8C-7BEB2C7289CA}.Release|x64.Build.0 = Release|Any CPU
 		{400050C1-A5CA-4FAD-8F8C-7BEB2C7289CA}.Release|x86.ActiveCfg = Release|Any CPU
 		{400050C1-A5CA-4FAD-8F8C-7BEB2C7289CA}.Release|x86.Build.0 = Release|Any CPU
+		{FDDB05A1-AA83-4078-845B-724D399EACAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDDB05A1-AA83-4078-845B-724D399EACAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDDB05A1-AA83-4078-845B-724D399EACAE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FDDB05A1-AA83-4078-845B-724D399EACAE}.Debug|x64.Build.0 = Debug|Any CPU
+		{FDDB05A1-AA83-4078-845B-724D399EACAE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FDDB05A1-AA83-4078-845B-724D399EACAE}.Debug|x86.Build.0 = Debug|Any CPU
+		{FDDB05A1-AA83-4078-845B-724D399EACAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDDB05A1-AA83-4078-845B-724D399EACAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDDB05A1-AA83-4078-845B-724D399EACAE}.Release|x64.ActiveCfg = Release|Any CPU
+		{FDDB05A1-AA83-4078-845B-724D399EACAE}.Release|x64.Build.0 = Release|Any CPU
+		{FDDB05A1-AA83-4078-845B-724D399EACAE}.Release|x86.ActiveCfg = Release|Any CPU
+		{FDDB05A1-AA83-4078-845B-724D399EACAE}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
