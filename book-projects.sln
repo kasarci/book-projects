@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11-inheriting-exception", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12-colleciton-stack-queue", "12-colleciton-stack-queue\12-colleciton-stack-queue.csproj", "{0AE5C12E-E515-4633-A445-D0D8AB176D89}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14-efcore-northwind", "14-efcore-northwind\14-efcore-northwind.csproj", "{D0B3E648-9EBB-4087-BE68-D4253CF5B77C}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -198,5 +200,17 @@ Global
 		{0AE5C12E-E515-4633-A445-D0D8AB176D89}.Release|x64.Build.0 = Release|Any CPU
 		{0AE5C12E-E515-4633-A445-D0D8AB176D89}.Release|x86.ActiveCfg = Release|Any CPU
 		{0AE5C12E-E515-4633-A445-D0D8AB176D89}.Release|x86.Build.0 = Release|Any CPU
+		{D0B3E648-9EBB-4087-BE68-D4253CF5B77C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0B3E648-9EBB-4087-BE68-D4253CF5B77C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0B3E648-9EBB-4087-BE68-D4253CF5B77C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D0B3E648-9EBB-4087-BE68-D4253CF5B77C}.Debug|x64.Build.0 = Debug|Any CPU
+		{D0B3E648-9EBB-4087-BE68-D4253CF5B77C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D0B3E648-9EBB-4087-BE68-D4253CF5B77C}.Debug|x86.Build.0 = Debug|Any CPU
+		{D0B3E648-9EBB-4087-BE68-D4253CF5B77C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0B3E648-9EBB-4087-BE68-D4253CF5B77C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0B3E648-9EBB-4087-BE68-D4253CF5B77C}.Release|x64.ActiveCfg = Release|Any CPU
+		{D0B3E648-9EBB-4087-BE68-D4253CF5B77C}.Release|x64.Build.0 = Release|Any CPU
+		{D0B3E648-9EBB-4087-BE68-D4253CF5B77C}.Release|x86.ActiveCfg = Release|Any CPU
+		{D0B3E648-9EBB-4087-BE68-D4253CF5B77C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
