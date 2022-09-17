@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Threading.Tasks.Dataflow;
 using _14_efcore_northwind;
 using _14_efcore_northwind.Entities;
 using Microsoft.EntityFrameworkCore;
@@ -22,7 +23,25 @@ void QueryingCategories() {
     loggerFactory.AddProvider(new ConsoleLoggerProvider());
     
     Console.WriteLine("Categorories and how many products they have");
-    IQueryable<Category>? categories = db.Categories;//.Include(c => c.Products);
+    IQueryable<Category>? categories;
+
+    db.ChangeTracker.LazyLoadingEnabled = false;
+
+    Console.Write("Enable Eager Loading? Y/N: ");
+    bool eagerLoading = (Console.ReadKey().Key == ConsoleKey.Y);
+    bool explicitLoading = false;
+
+    Console.WriteLine();
+
+    if (eagerLoading) {
+      categories = db.Categories?.Include(c => c.Products);
+    } else {
+      categories = db.Categories;
+
+      Console.Write("Enable Explicit Loading? Y/N: ");
+      explicitLoading = Console.ReadKey().Key == ConsoleKey.Y;
+      Console.WriteLine();
+    }
 
     if(categories is null) {
       Console.WriteLine("No categories found.");
@@ -31,6 +50,19 @@ void QueryingCategories() {
 
     foreach (Category category in categories)
     {
+      
+    if (explicitLoading) {
+      Console.Write($"Explicitly load products for {category.CategoryName}? Y/N: ");
+      Console.WriteLine();
+      if (Console.ReadKey().Key == ConsoleKey.Y) {
+        var products = db.Entry(category).Collection(c => c.Products);
+        if (!products.IsLoaded) {
+          products.Load();
+        }
+      }
+    } else {
+      db.ChangeTracker.LazyLoadingEnabled = true;
+    }
       Console.WriteLine($"{category.CategoryName} has {category.Products.Count} products.");
     }
   }
