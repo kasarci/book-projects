@@ -28,6 +28,10 @@ public class ConsoleLogger : ILogger
 
   public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception? exception, Func<TState, Exception?, string> formatter)
   {
+    if (eventId.Id is 10806) {
+      return;
+    }
+    
     Console.Write($"Level: {logLevel}, EventId: {eventId.Id}");
 
     if (state is not null) {
