@@ -11,6 +11,9 @@ public class Northwind : DbContext {
   protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
   {
     base.OnConfiguring(optionsBuilder);
+
+    optionsBuilder.UseLazyLoadingProxies();
+
     if( ProjectConstants.DatabaseProvider == "SQLite") {
       string path = @"C:\sqlite\Northwind\Northwind.db";
       Console.WriteLine($"Using {path} as a database file. ");

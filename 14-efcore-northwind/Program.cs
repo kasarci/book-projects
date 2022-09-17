@@ -9,10 +9,10 @@ using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 using Microsoft.Extensions.Logging;
 
 Console.WriteLine("Hello From EFCore!");
-// QueryingCategories();
+QueryingCategories();
 // FilteringQueries();
 // FilterAndSort();
-QueryingWithLike();
+// QueryingWithLike();
 
 
 void QueryingCategories() {
@@ -22,7 +22,7 @@ void QueryingCategories() {
     loggerFactory.AddProvider(new ConsoleLoggerProvider());
     
     Console.WriteLine("Categorories and how many products they have");
-    IQueryable<Category>? categories = db.Categories.Include(c => c.Products);
+    IQueryable<Category>? categories = db.Categories;//.Include(c => c.Products);
 
     if(categories is null) {
       Console.WriteLine("No categories found.");
