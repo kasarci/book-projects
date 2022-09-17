@@ -1,11 +1,14 @@
-﻿using _14_efcore_northwind;
+﻿using System.Linq;
+using _14_efcore_northwind;
 using _14_efcore_northwind.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.EntityFrameworkCore.Query;
 
 Console.WriteLine("Hello From EFCore!");
 QueryingCategories();
 FilteringQueries();
+FilterAndSort();
 
 void QueryingCategories() {
   using(Northwind db = new Northwind()) {
@@ -46,6 +49,33 @@ void FilteringQueries() {
     } else {
       Console.WriteLine("Type something more meaningful.");
       return;
+    }
+  }
+}
+
+void FilterAndSort() {
+  using( Northwind db = new()) {
+    Console.WriteLine("Products that cost more than a proce, highest at the top.");
+
+    decimal price;
+
+    do
+    {
+      Console.Write("Enter a product price: ");     
+    } while (!decimal.TryParse(Console.ReadLine(), out price));
+
+    var products = db.Products.Where(p => p.Cost > price).OrderByDescending(p => p.Cost);
+    
+    if(products is null) {
+      Console.WriteLine("No products found.");
+      return;
+    }
+
+    Console.WriteLine(products.ToQueryString());
+
+    foreach (var product in products)
+    {
+      Console.WriteLine($"{product.ProductName} costs {product.Cost} and has {product.Stock} in the stock.");
     }
   }
 }
