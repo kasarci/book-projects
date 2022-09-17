@@ -5,12 +5,15 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.EntityFrameworkCore.Query;
+using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 using Microsoft.Extensions.Logging;
 
 Console.WriteLine("Hello From EFCore!");
-QueryingCategories();
-FilteringQueries();
-FilterAndSort();
+// QueryingCategories();
+// FilteringQueries();
+// FilterAndSort();
+QueryingWithLike();
+
 
 void QueryingCategories() {
   using(Northwind db = new Northwind()) {
@@ -82,6 +85,28 @@ void FilterAndSort() {
     foreach (var product in products)
     {
       Console.WriteLine($"{product.ProductName} costs {product.Cost} and has {product.Stock} in the stock.");
+    }
+  }
+}
+void QueryingWithLike()
+{
+  using (Northwind db = new ()) {
+    ILoggerFactory loggerFactory = db.GetService<ILoggerFactory>();
+    loggerFactory.AddProvider(new ConsoleLoggerProvider());
+
+    Console.WriteLine("Enter part of a product name: ");
+    string? input = Console.ReadLine();
+
+    var filteredProducts = db.Products?.Where(p => EF.Functions.Like(p.ProductName, $"%{input}%"));
+
+    if (filteredProducts is null) {
+      Console.WriteLine("No products found in matched pattern.");
+      return;
+    }
+
+    foreach (var product in filteredProducts)
+    {
+      Console.WriteLine($"{product.ProductName} has {product.Stock} units in stock. Discontinued? {product.Discontinued}");
     }
   }
 }
