@@ -2,8 +2,10 @@
 using _14_efcore_northwind;
 using _14_efcore_northwind.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.EntityFrameworkCore.Query;
+using Microsoft.Extensions.Logging;
 
 Console.WriteLine("Hello From EFCore!");
 QueryingCategories();
@@ -12,6 +14,10 @@ FilterAndSort();
 
 void QueryingCategories() {
   using(Northwind db = new Northwind()) {
+
+    ILoggerFactory loggerFactory = db.GetService<ILoggerFactory>();
+    loggerFactory.AddProvider(new ConsoleLoggerProvider());
+    
     Console.WriteLine("Categorories and how many products they have");
     IQueryable<Category>? categories = db.Categories.Include(c => c.Products);
 
