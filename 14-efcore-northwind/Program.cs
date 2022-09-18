@@ -1,19 +1,33 @@
-﻿using System.Linq;
-using System.Threading.Tasks.Dataflow;
+﻿
+using System.Data.Common;
 using _14_efcore_northwind;
 using _14_efcore_northwind.Entities;
+using EntityFramework.Exceptions.Common;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.EntityFrameworkCore.Query;
 using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
+using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.Extensions.Logging;
 
 Console.WriteLine("Hello From EFCore!");
-QueryingCategories();
+// QueryingCategories();
 // FilteringQueries();
 // FilterAndSort();
 // QueryingWithLike();
+// AddProduct(new Product{
+//   CategoryId = 6,
+//   ProductName = "Bob's Burgers",
+//   Cost = 500M
+// });
+//UpdateStock("Bob's", 30);
+
+ListProducts();
+
+DeleteProduct("Bob's");
+
+ListProducts();
 
 
 void QueryingCategories() {
@@ -139,6 +153,69 @@ void QueryingWithLike()
     foreach (var product in filteredProducts)
     {
       Console.WriteLine($"{product.ProductName} has {product.Stock} units in stock. Discontinued? {product.Discontinued}");
+    }
+  }
+}
+void AddProduct(Product product) {
+  if (product is null) {
+    throw new ArgumentNullException(nameof(product));
+  }
+
+  using(Northwind db = new()) {
+    db.Products.Add(product);
+    try {
+      db.SaveChanges();
+    } catch (DbUpdateException ex) {
+      throw ex;
+    }
+  }
+}
+void ListProducts() {
+  using (Northwind db = new()) {
+    Console.WriteLine("{0,-3} {1,-35} {2,8} {3,5} {4}",
+                "Id", "Product Name", "Cost", "Stock", "Disc.");
+
+    foreach(var product in db!.Products.OrderByDescending(p => p.Cost)){
+      Console.WriteLine("{0:000} {1,35} {2,8:$#,##0.00} {3,5} {4}",
+                        product.ProductId,
+                        product.ProductName,
+                        product.Cost,
+                        product.Stock,
+                        product.Discontinued);
+    }
+  }
+}
+
+void UpdateStock(string productNameStartsWith, short stock) {
+  using (Northwind db = new ()) {
+    var product = db.Products.First(p => p.ProductName.StartsWith(productNameStartsWith));
+    
+    if(product is null) {
+      Console.WriteLine($"No product has found with the name starts with {product}");
+    }
+
+    product.Stock = stock;
+
+    try {
+      db.SaveChanges();
+    } catch (DbUpdateException ex) {
+      throw ex;
+    }
+  }
+}
+
+void DeleteProduct(string productNameStartsWith) {
+  using (Northwind db = new()) {
+    var product = db.Products.First(p => p.ProductName.StartsWith(productNameStartsWith));
+
+    if (product is null){
+       Console.WriteLine($"No product has found with the name starts with {product}");  
+    }
+    try {
+      db.Products.Remove(product);
+      db.SaveChanges();
+    } catch (DbUpdateException ex) {
+      throw ex;
     }
   }
 }
