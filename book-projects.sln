@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14-efcore-northwind", "14-e
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15-efcore-code-first", "15-efcore-code-first\15-efcore-code-first.csproj", "{575DC680-52D9-4A98-9F4D-502EED0CC4EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16-linq", "16-linq\16-linq.csproj", "{302455BC-974C-4187-9EE6-445A4C8721CE}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -226,5 +228,17 @@ Global
 		{575DC680-52D9-4A98-9F4D-502EED0CC4EA}.Release|x64.Build.0 = Release|Any CPU
 		{575DC680-52D9-4A98-9F4D-502EED0CC4EA}.Release|x86.ActiveCfg = Release|Any CPU
 		{575DC680-52D9-4A98-9F4D-502EED0CC4EA}.Release|x86.Build.0 = Release|Any CPU
+		{302455BC-974C-4187-9EE6-445A4C8721CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{302455BC-974C-4187-9EE6-445A4C8721CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{302455BC-974C-4187-9EE6-445A4C8721CE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{302455BC-974C-4187-9EE6-445A4C8721CE}.Debug|x64.Build.0 = Debug|Any CPU
+		{302455BC-974C-4187-9EE6-445A4C8721CE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{302455BC-974C-4187-9EE6-445A4C8721CE}.Debug|x86.Build.0 = Debug|Any CPU
+		{302455BC-974C-4187-9EE6-445A4C8721CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{302455BC-974C-4187-9EE6-445A4C8721CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{302455BC-974C-4187-9EE6-445A4C8721CE}.Release|x64.ActiveCfg = Release|Any CPU
+		{302455BC-974C-4187-9EE6-445A4C8721CE}.Release|x64.Build.0 = Release|Any CPU
+		{302455BC-974C-4187-9EE6-445A4C8721CE}.Release|x86.ActiveCfg = Release|Any CPU
+		{302455BC-974C-4187-9EE6-445A4C8721CE}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
