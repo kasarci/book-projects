@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17-benchmark", "17-benchmar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20-webapi", "20-webapi\20-webapi.csproj", "{BFC65DB4-7FCA-4228-A6E7-DEAF77B1A151}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "21-consume-api", "21-consume-api\21-consume-api.csproj", "{B4FDA410-88DC-4D25-8490-F01EA23C7E95}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -268,5 +270,17 @@ Global
 		{BFC65DB4-7FCA-4228-A6E7-DEAF77B1A151}.Release|x64.Build.0 = Release|Any CPU
 		{BFC65DB4-7FCA-4228-A6E7-DEAF77B1A151}.Release|x86.ActiveCfg = Release|Any CPU
 		{BFC65DB4-7FCA-4228-A6E7-DEAF77B1A151}.Release|x86.Build.0 = Release|Any CPU
+		{B4FDA410-88DC-4D25-8490-F01EA23C7E95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4FDA410-88DC-4D25-8490-F01EA23C7E95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4FDA410-88DC-4D25-8490-F01EA23C7E95}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B4FDA410-88DC-4D25-8490-F01EA23C7E95}.Debug|x64.Build.0 = Debug|Any CPU
+		{B4FDA410-88DC-4D25-8490-F01EA23C7E95}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B4FDA410-88DC-4D25-8490-F01EA23C7E95}.Debug|x86.Build.0 = Debug|Any CPU
+		{B4FDA410-88DC-4D25-8490-F01EA23C7E95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4FDA410-88DC-4D25-8490-F01EA23C7E95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4FDA410-88DC-4D25-8490-F01EA23C7E95}.Release|x64.ActiveCfg = Release|Any CPU
+		{B4FDA410-88DC-4D25-8490-F01EA23C7E95}.Release|x64.Build.0 = Release|Any CPU
+		{B4FDA410-88DC-4D25-8490-F01EA23C7E95}.Release|x86.ActiveCfg = Release|Any CPU
+		{B4FDA410-88DC-4D25-8490-F01EA23C7E95}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
