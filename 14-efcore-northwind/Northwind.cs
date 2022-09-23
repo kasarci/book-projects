@@ -8,6 +8,11 @@ public class Northwind : DbContext {
   public DbSet<Category>? Categories { get; set; }
   public DbSet<Product>? Products { get; set; }
 
+  public Northwind(DbContextOptions<Northwind> options) :base(options)
+  {
+    
+  }
+
   protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
   {
     base.OnConfiguring(optionsBuilder);

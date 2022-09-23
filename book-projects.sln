@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16-linq", "16-linq\16-linq.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17-benchmark", "17-benchmark\17-benchmark.csproj", "{1E36ACC7-B316-4F22-A3BF-892325E22934}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20-webapi", "20-webapi\20-webapi.csproj", "{BFC65DB4-7FCA-4228-A6E7-DEAF77B1A151}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -254,5 +256,17 @@ Global
 		{1E36ACC7-B316-4F22-A3BF-892325E22934}.Release|x64.Build.0 = Release|Any CPU
 		{1E36ACC7-B316-4F22-A3BF-892325E22934}.Release|x86.ActiveCfg = Release|Any CPU
 		{1E36ACC7-B316-4F22-A3BF-892325E22934}.Release|x86.Build.0 = Release|Any CPU
+		{BFC65DB4-7FCA-4228-A6E7-DEAF77B1A151}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFC65DB4-7FCA-4228-A6E7-DEAF77B1A151}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFC65DB4-7FCA-4228-A6E7-DEAF77B1A151}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BFC65DB4-7FCA-4228-A6E7-DEAF77B1A151}.Debug|x64.Build.0 = Debug|Any CPU
+		{BFC65DB4-7FCA-4228-A6E7-DEAF77B1A151}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BFC65DB4-7FCA-4228-A6E7-DEAF77B1A151}.Debug|x86.Build.0 = Debug|Any CPU
+		{BFC65DB4-7FCA-4228-A6E7-DEAF77B1A151}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFC65DB4-7FCA-4228-A6E7-DEAF77B1A151}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFC65DB4-7FCA-4228-A6E7-DEAF77B1A151}.Release|x64.ActiveCfg = Release|Any CPU
+		{BFC65DB4-7FCA-4228-A6E7-DEAF77B1A151}.Release|x64.Build.0 = Release|Any CPU
+		{BFC65DB4-7FCA-4228-A6E7-DEAF77B1A151}.Release|x86.ActiveCfg = Release|Any CPU
+		{BFC65DB4-7FCA-4228-A6E7-DEAF77B1A151}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
